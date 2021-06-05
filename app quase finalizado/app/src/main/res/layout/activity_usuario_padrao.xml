@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/agendamento"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinnerUser"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="139dp"
+        android:entries="@array/horarios"
+        android:prompt="@string/horaEscolhida"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="@id/btInserir"
+        app:layout_constraintBottom_toTopOf="@+id/btInserir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btInserir"
+        app:layout_constraintVertical_bias="0.768" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="139dp"
+        android:gravity="center"
+        android:text="Horário"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@id/btInserir"
+        app:layout_constraintEnd_toEndOf="@+id/eDataPadrao"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btDataPadrao"
+        app:layout_constraintTop_toBottomOf="@+id/rdGroupPadrao"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <TextView
+        android:id="@+id/eDataPadrao"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="date"
+        android:textColor="@color/preto"
+        app:layout_constraintStart_toEndOf="@+id/btDataPadrao"
+        app:layout_constraintTop_toBottomOf="@+id/rdGroupPadrao" />
+
+    <Button
+        android:id="@+id/btInserir"
+        android:layout_marginTop="116dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/btlogin_gradient"
+        android:gravity="center"
+        android:text="Inserir"
+        android:textColor="@color/preto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+    />
+
+    <Button
+        android:id="@+id/btDataPadrao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/btlogin_gradient"
+        android:gravity="center"
+        android:text="Data"
+        android:textColor="@color/preto"
+        app:layout_constraintBottom_toBottomOf="@id/btInserir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <RadioGroup
+        android:id="@+id/rdGroupPadrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btDataPadrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="15dp">
+
+        <RadioButton
+            android:id="@+id/rdPedicurePadrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedicure"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="283dp" />
+
+        <RadioButton
+            android:id="@+id/rdManicurePadrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manicure"
+            tools:layout_editor_absoluteX="154dp"
+            tools:layout_editor_absoluteY="283dp" />
+
+        <RadioButton
+            android:id="@+id/rdSombrancelhaPadrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sombrancelha"
+            tools:layout_editor_absoluteX="244dp"
+            tools:layout_editor_absoluteY="283dp" />
+
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/agendados"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btlogin_gradient"
+        android:text="Agendados"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/rdGroupPadrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Salão Padua</string>
+    <string name="horaEscolhida">Escolha um horário</string>
+    <string-array name="horarios">
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+    </string-array>
+
+</resources>
